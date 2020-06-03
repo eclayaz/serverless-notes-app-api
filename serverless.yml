@@ -10,6 +10,10 @@ plugins:
   - serverless-offline
   - serverless-dotenv-plugin # Load .env as environment variables
 
+resources:
+  # API Gateway Errors
+  - ${file(resources/api-gateway-errors.yml)}
+
 provider:
   name: aws
   runtime: nodejs10.x
